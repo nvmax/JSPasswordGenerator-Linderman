@@ -132,12 +132,41 @@ function generatePassword(){
   specialCheck();
   console.log(checkSpecial); // shows true & false when yes or no is selected - works
 
-  var characterString = lowercaseChar
+  var characterString = ""
 
+
+
+  // credit: https://stackoverflow.com/a/32625608 SiCK (allowed me to figure out check each against each other)
   var password = "";
   if (checklowerCase && checkUpperCase && checkNumber && checkSpecial){
     characterString += lowercaseChar + uppercaseChar + numberChar + specialChar;
+  //              1               2
+  } else if (checklowerCase && checkUpperCase){
+    characterString += lowercaseChar + uppercaseChar;
+//               2                  3
+  } else if (checkUpperCase && checkNumber){
+    characterString += uppercaseChar + numberChar;
+//               3                 4
+  } else if (checkNumber && checkSpecial){
+    characterString += numberChar + specialChar;
+//               4                 1
+  } else if (checkSpecial && checklowerCase){
+    characterString += specialChar + lowercaseChar;
+//              1                                          
+  } else if (checklowerCase){
+    characterString += lowercaseChar;
+//              2
+  } else if (checkUpperCase){
+    characterString += uppercaseChar;
+//              3
+  } else if (checkNumber){
+    characterString += numberChar;
+//              4
+  } else if (checkSpecial){
+    characterString += specialChar;
   }
+
+
   for (var i = 0; i < passwordLength; i++){
     password += characterString.charAt(Math.floor(Math.random() * characterString.length));
   }
