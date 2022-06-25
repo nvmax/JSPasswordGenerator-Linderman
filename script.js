@@ -132,5 +132,19 @@ function generatePassword(){
   specialCheck();
   console.log(checkSpecial); // shows true & false when yes or no is selected - works
 
+  var characterString = lowercaseChar
+
+  var password = "";
+  if (checklowerCase && checkUpperCase && checkNumber && checkSpecial){
+    characterString += lowercaseChar + uppercaseChar + numberChar + specialChar;
+  }
+  for (var i = 0; i < passwordLength; i++){
+    password += characterString.charAt(Math.floor(Math.random() * characterString.length));
+  }
+
+  return password;
+
+
+
 }
 
