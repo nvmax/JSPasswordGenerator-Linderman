@@ -1,10 +1,23 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// creating variables length, lowercase, uppercase, numeric, special
-var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numberChar = "0123456789";
-var specialChar = "!@#$%^&*()_-+={}[];:'`~<,>.?/|";
+
+// credit: image72 for lowercase portion figured the rest out on my own from that point with his code help.
+// https://gist.github.com/bendc/1e6af8f2d8027f2965da?permalink_comment_id=3792470#gistcomment-3792470 
+// - helped me figure out how to generate a random character and pull from arrays into string
+// grabs lowercase letters 
+var lowercaseChar = String.fromCharCode(...Array(123).keys()).slice(97)
+console.log(lowercaseChar)
+// grabs uppercase letters
+var uppercaseChar = String.fromCharCode(...Array(123).keys()).slice(65,91)
+console.log(uppercaseChar)
+// grabs numbers 
+var numberChar = String.fromCharCode(...Array(123).keys()).slice(48,58)
+console.log(numberChar)
+// grabs special characters 
+var specialChar = String.fromCharCode(...Array(123).keys()).slice(32,48)
+    .concat(String.fromCharCode(...Array(123).keys()).slice(59,65))
+console.log(specialChar)
+
 var passwordLength;
 var checklowerCase;
 var checkUpperCase;
@@ -17,7 +30,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
