@@ -56,97 +56,97 @@ function lengthCheck() {
 // asks if you want lowercase letters
 function lowercaseCheck(){
   checklowerCase = prompt("Do you want lowercase in your password? \n(Yes or No)");
-    checklowerCase = checklowerCase.toLowerCase();
+  checklowerCase = checklowerCase.toLowerCase();
 // asks for  response of yes or no
-    if (checklowerCase === null || checklowerCase === ""){
-      alert("Please answer Yes or No");
-      lowercaseCheck();
+  if (checklowerCase === null || checklowerCase === ""){
+    alert("Please answer Yes or No");
+    lowercaseCheck();
 // if yes, checklowerCase is true
-    }else if (checklowerCase === "yes" || checklowerCase ==="y"){
-      checklowerCase = true;
-      return checklowerCase;
-// if no, checklowerCase is false
-    }else if (checklowerCase === "no" || checklowerCase ==="n"){
-      checklowerCase = false;
-      return checklowerCase;
-// if anything else, ask again
-    }else {
-      alert("Please answer Yes or No");
-      lowercaseCheck();
-    }
+  }else if (checklowerCase === "yes" || checklowerCase ==="y"){
+    checklowerCase = true;
     return checklowerCase;
- }
+// if no, checklowerCase is false
+  }else if (checklowerCase === "no" || checklowerCase ==="n"){
+    checklowerCase = false;
+    return checklowerCase;
+// if anything else, ask again
+  }else {
+    alert("Please answer Yes or No");
+    lowercaseCheck();
+  }
+  return checklowerCase;
+}
 
 // asks if you want uppercase letters
 function uppercaseCheck(){
   checkUpperCase = prompt("Do you want uppercase in your password? \n(Yes or No)");
-    checkUpperCase = checkUpperCase.toLowerCase();
+  checkUpperCase = checkUpperCase.toLowerCase();
 // asks for response of yes or no
-    if (checkUpperCase === null || checkUpperCase === ""){
-      alert("Please answer Yes or No");
-      uppercaseCheck();
+  if (checkUpperCase === null || checkUpperCase === ""){
+    alert("Please answer Yes or No");
+    uppercaseCheck();
 // if yes, checkUpperCase is true
-    }else if (checkUpperCase === "yes" || checkUpperCase ==="y"){
-      checkUpperCase = true;
-      return checkUpperCase;
-// if no, checkUpperCase is false
-    }else if (checkUpperCase === "no" || checkUpperCase ==="n"){
-      checkUpperCase = false;
-      return checkUpperCase;
-// if anything else, ask again
-    }else {
-      alert("Please answer Yes or No");
-      uppercaseCheck();
-    }
+  }else if (checkUpperCase === "yes" || checkUpperCase ==="y"){
+    checkUpperCase = true;
     return checkUpperCase;
+// if no, checkUpperCase is false
+  }else if (checkUpperCase === "no" || checkUpperCase ==="n"){
+    checkUpperCase = false;
+    return checkUpperCase;
+// if anything else, ask again
+  }else {
+    alert("Please answer Yes or No");
+    uppercaseCheck();
   }
+  return checkUpperCase;
+}
 // asks if you want numbers in your password 
 function numberCheck(){
   checkNumber = prompt("Do you want numbers in your password? \n(Yes or No)");
-    checkNumber = checkNumber.toLowerCase();
+  checkNumber = checkNumber.toLowerCase();
 // asks for response of yes or no
-    if (checkNumber === null || checkNumber === ""){
-      alert("Please answer Yes or No");
-       numberCheck();
+  if (checkNumber === null || checkNumber === ""){
+    alert("Please answer Yes or No");
+    numberCheck();
 // if yes, checkNumber is true
-    }else if (checkNumber === "yes" || checkNumber ==="y"){
-      checkNumber = true;
-      return checkNumber;
-// if no, checkNumber is false
-    }else if (checkNumber === "no" || checkNumber ==="n"){
-      checkNumber = false;
-      return checkNumber;
-// if anything else, ask again 
-    }else {
-      alert("Please answer Yes or No");
-      numberCheck();
-    }
+  }else if (checkNumber === "yes" || checkNumber ==="y"){
+    checkNumber = true;
     return checkNumber;
+// if no, checkNumber is false
+  }else if (checkNumber === "no" || checkNumber ==="n"){
+    checkNumber = false;
+    return checkNumber;
+// if anything else, ask again 
+  }else {
+    alert("Please answer Yes or No");
+    numberCheck();
   }
+  return checkNumber;
+}
 
     // asks if you want special characters in your password
 function specialCheck(){
   checkSpecial = prompt("Do you want special characters in your password? \n(Yes or No)");
-    checkSpecial = checkSpecial.toLowerCase();
-// asks for response of yes or no
-    if (checkSpecial === null || checkSpecial === ""){
-      alert("Please answer Yes or No");
-      specialCheck();
-// if yes, checkSpecial is true
-    }else if (checkSpecial === "yes" || checkSpecial ==="y"){
-      checkSpecial = true;
-      return checkSpecial;
-
-    }else if (checkSpecial === "no" || checkSpecial ==="n"){
-      checkSpecial = false;
-      return checkSpecial;
-// if anything else, ask again
-    }else {
-      alert("Please answer Yes or No");
-      specialCheck();
-    }
+  checkSpecial = checkSpecial.toLowerCase();
+      // asks for response of yes or no
+  if (checkSpecial === null || checkSpecial === ""){
+    alert("Please answer Yes or No");
+    specialCheck();
+        // if yes, checkSpecial is true
+  }else if (checkSpecial === "yes" || checkSpecial ==="y"){
+    checkSpecial = true;
     return checkSpecial;
+        // if no, checkSpecial is false
+  }else if (checkSpecial === "no" || checkSpecial ==="n"){
+    checkSpecial = false;
+    return checkSpecial;
+      // if anything else, ask again
+  }else {
+    alert("Please answer Yes or No");
+    specialCheck();
   }
+  return checkSpecial;
+}
 
 
 function generatePassword(){
