@@ -15,8 +15,7 @@ var numberChar = String.fromCharCode(...Array(123).keys()).slice(48, 58);
 console.log(numberChar);
 // grabs special characters
 var specialChar = String.fromCharCode(...Array(123).keys())
-  .slice(33, 48)
-  .concat(String.fromCharCode(...Array(123).keys()).slice(59, 65));
+  .slice(33, 48).concat(String.fromCharCode(...Array(123).keys()).slice(59, 65));
 console.log(specialChar);
 var passwordLength;
 var checklowerCase;
@@ -36,7 +35,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 // password length function and check//
-function lengthCheck() {
+const lengthCheck = function () {
   passwordLength = prompt(
     "How many characters would you like your password to be?"
   );
@@ -54,10 +53,10 @@ function lengthCheck() {
     lengthCheck();
   }
   return passwordLength;
-}
+};
 
 // asks if you want lowercase letters
-function lowercaseCheck() {
+const lowercaseCheck = function () {
   checklowerCase = prompt(
     "Do you want lowercase in your password? \n(Yes or No)"
   );
@@ -80,10 +79,10 @@ function lowercaseCheck() {
     lowercaseCheck();
   }
   return checklowerCase;
-}
+};
 
 // asks if you want uppercase letters
-function uppercaseCheck() {
+const uppercaseCheck = function () {
   checkUpperCase = prompt(
     "Do you want uppercase in your password? \n(Yes or No)"
   );
@@ -106,9 +105,9 @@ function uppercaseCheck() {
     uppercaseCheck();
   }
   return checkUpperCase;
-}
+};
 // asks if you want numbers in your password
-function numberCheck() {
+const numberCheck = function () {
   checkNumber = prompt("Do you want numbers in your password? \n(Yes or No)");
   checkNumber = checkNumber.toLowerCase();
   // asks for response of yes or no
@@ -129,10 +128,10 @@ function numberCheck() {
     numberCheck();
   }
   return checkNumber;
-}
+};
 
 // asks if you want special characters in your password
-function specialCheck() {
+const specialCheck = function () {
   checkSpecial = prompt(
     "Do you want special characters in your password? \n(Yes or No)"
   );
@@ -155,7 +154,7 @@ function specialCheck() {
     specialCheck();
   }
   return checkSpecial;
-}
+};
 
 const generatePassword = function () {
   lengthCheck();
