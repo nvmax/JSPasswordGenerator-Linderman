@@ -14,7 +14,7 @@ Asks for a length of password and selections of lower case letters, upper case l
 
 Generates a password based on the selections.
 
-![](/images/sizesection.png)
+![](/images/sizeselection.png)
 ![](/images/lowerc.png)
 ![](/images/upperc.png)
 ![](/images/numbers.png)
